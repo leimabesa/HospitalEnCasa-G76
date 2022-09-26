@@ -1,0 +1,39 @@
+﻿@page
+@model HospiEnCasa.Frontend.Pages.EditarSugerenciaCuidadoModel
+@{
+}
+<h1>Editar Sugerencia De Cuidados</h1>
+<h3>@ViewData["Error"]</h3>
+
+<form method="POST" class="row g-3">
+    <div asp-validatio-summary= "ModeOnly" class= "text-danger"></div>
+    <input type="hidden" asp-for="SugerenciaCuidado.Id"/>
+    <div class="col-md-4">
+        <label asp-for="SugerenciaCuidado.Id" class="form-label">id</label>
+        <input type= "Text" asp-for="SugerenciaCuidado.Id" class="form-control" id="Id">
+        <span asp-validation-for= "SugerenciaCuidado.Id" class = "text-danger"></span>
+    </div>
+    <div class="col-md-4">
+        <label asp-for="SugerenciaCuidado.FechaHora" class="form-label">FechaHora</label>
+        <input type="Text" asp-for="SugerenciaCuidado.FechaHora" class="form-control" id="FechaHora">
+         <span asp-validation-for= "SugerenciaCuidado.FechaHora" class = "text-danger"></span>
+    </div>
+    <div class="col-md-4">
+        <label asp-for="SugerenciaCuidado.Descripcion" class="form-label">Descripcion</label>
+        <input type="Text" asp-for="SugerenciaCuidado.Descripcion" class="form-control" id="Descripcion">
+         <span asp-validation-for= "SugerenciaCuidado.Descripcion" class = "text-danger"></span>
+    </div>
+    <div class="col-4">
+        <label asp-for="SugerenciaCuidado.Historia" class="form-label">Historia</label>
+        <input type="text" asp-for="SugerenciaCuidado.Historia" class="form-control" id="Historia">
+         <span asp-validation-for= "SugerenciaCuidado.Historia" class = "text-danger"></span>
+    </div>
+    <div class="col-md-4">
+        <label asp-for="SugerenciaCuidado.HistoriaId" class="form-label">Correo</label>
+        <input type="text" asp-for="SugerenciaCuidado.HistoriaId" class="form-control" id="HistoriaId">
+         <span asp-validation-for= "SugerenciaCuidado.HistoriaId" class = "text-danger"></span>
+    </div>
+    <div class="col-12">
+        <button type="submit" class="btn btn-success" id="alerta">Guardar</button>
+    </div>
+</form>
